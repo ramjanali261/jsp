@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Pizza Toppings</title>
+ <script type="text/javascript">
+    function selectOnlyOneCheckbox(checkbox) {
+      var checkboxes = document.getElementsByName('salute');
+      checkboxes.forEach((item) => {
+        if (item !== checkbox) {
+          item.checked = false;
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+
+ <h1>Pizza Toppings</h1>
+
+ <form action="pizaa.jsp" method="post">
+  <label for="salutation">Select</label><br>
+  <input type="checkbox" onclick="selectOnlyOneCheckbox(this)" id="sal1" name="salute" value="Mr">
+    <label for="sal1">Mr</label><br>
+
+    <input type="checkbox" onclick="selectOnlyOneCheckbox(this)" id="sal2" name="salute" value="Ms">
+    <label for="sal2">Ms</label><br>
+  
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name"><br><br>
+
+  <label for="toppings">Toppings:</label><br>
+  <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+    <label for="pepperoni">Pepperoni</label><br>
+
+    <input type="checkbox" id="sausage" name="toppings" value="Sausage">
+    <label for="sausage">Sausage</label><br>
+
+    <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+    <label for="mushrooms">Mushrooms</label><br>
+
+    <input type="checkbox" id="onions" name="toppings" value="Onions">
+    <label for="onions">Onions</label><br>
+
+    <input type="checkbox" id= "extra_cheese" name= "toppings" value= "Extra Cheese">
+        <label for= "extra_cheese">Extra Cheese</label><br>
+
+        <input type= "checkbox" id= "peppers" name= "toppings" value= "Peppers">
+        <label for= "peppers">Peppers</label><br>
+
+        <input type= "checkbox" id= "chicken" name= "toppings" value= "Chicken">
+        <label for= "chicken">Chicken</label><br><br>
+
+  <input type="submit" value="Submit">
+ </form>
+
+</body>
+</html>
